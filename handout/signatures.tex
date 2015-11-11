@@ -48,7 +48,7 @@ After completing this practical the trainee should be able to:
 \begin{description}[style=multiline,labelindent=0cm,align=left,leftmargin=1cm]
   \item[R-3.2.2 statistical environment] \hfill\\
     \url{https://www.r-project.org/}
-  \item[with installed R packages and their dependancies] \hfill\\
+  \item[with installed R packages and their dependencies] \hfill\\
   \item[SomaticSignatures R package] \hfill\\
     \url{http://bioconductor.org/packages/release/bioc/html/SomaticSignatures.html}
   \item[BSgenome.Hsapiens.UCSC.hg19] \hfill\\
@@ -159,7 +159,7 @@ library(ggplot2)
 library(Cairo)
 \end{lstlisting}
 
-Set the drictory where any output files will be generated
+Set the directory where any output files will be generated
 \begin{lstlisting}
 setwd(”~/somatic/somatic_signatures”)
 \end{lstlisting}
@@ -311,7 +311,7 @@ dim(mm)
 \end{steps}
 
 The output of the \texttt{dim(mm)} command show us that there are 96 rows (these are the context values)
-and 12 coloumns which are the 12 samples.
+and 12 columns which are the 12 samples.
 
 
 %----------------------------------------------------------------------------------------
@@ -432,14 +432,14 @@ Alexandrov signature 13 matches with our signature 2
 Alexandrov signature 3 matches with our signature 3
 \end{answer}
 
-Now use the table from Alexandrov et al to identify wich mutational
-processes our three generated signatures have been asscoaiated with.
+Now use the table from Alexandrov et al to identify which mutational
+processes our three generated signatures have been associated with.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{handout/mutational_processes.png}
 \caption{The 21 signatures identified are indicated as rows with the number corresponding
-to Figure2 on the left. The types of tumours used in the analysis are listed as coloumns.
+to Figure2 on the left. The types of tumours used in the analysis are listed as columns.
 A green dot at the intersection of a signature and tumour indicates the signature was
 identified in that sample type. Where verified the mutational process is listed on the right.}
 \label{Figure 3 Table indicating the probable association of the identified signatures
@@ -476,7 +476,7 @@ n
 
 
 Open the resulting plot. This shows the results for the mutation grouping for each sample.
-The samples are listed on the x-axis and the propotion of all mutations for that
+The samples are listed on the x-axis and the proportion of all mutations for that
 sample is shown on the y-axis. The colours of the bars indicate what proportion of the
 mutations for that sample were grouped into each of the signatures. The colour
 that makes up most of the bar for each sample is called its ‘major signature’.
@@ -513,7 +513,7 @@ to the step where you run the NMF but this time for 4 instead of 3
 signatures. Then continue through making the plots.
 
 You will need to change the name of each plot you remake with 4
-signatures because Cairo won't let you overwrite and exsiting file.
+signatures because Cairo won't let you overwrite and existing file.
 \end{information}
 \begin{questions}
 Can you find a good match in the set of known signatures for all 4 patterns? 
