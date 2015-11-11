@@ -303,6 +303,7 @@ Hint remember to reverse compliment all the nucleotides.
 Now we have all the information that is needed for each sample we can make a matrix
 that contains counts of mutations in each of the 96 possible combinations of
 mutations and contexts counting up the totals separately for each sample
+
 \begin{lstlisting}
 mm <- motifMatrix(mc, group = "sampleNames", normalize=TRUE)
 dim(mm)
