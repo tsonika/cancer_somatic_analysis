@@ -85,14 +85,16 @@ increases. We think of the key genes driving tumour initiation (development), pr
 metastases, resistance and survival. Driver gene mutations are often described as ‘early’
 events because they were key in turning a normally functioning and regulated cell into a
 dysregulated one. The logical assumption is that these key mutations will be present in
-all tumour cells in a patient’s sample; although sometime this is not true. 
-
+all tumour cells in a patient’s sample; although sometime this is not true.
+\vspace{4 mm]}
 There are two major research goals that underline the need to identify driver genes:
-•	By identifying the early changes that take place researchers might be able
+\begin{itemize}
+ \item By identifying the early changes that take place researchers might be able
         to find a treatment to stop the root cause of why cells become malignant. 
-•	By identifying groups of patients with the same genes mutated then we can
+\item By identifying groups of patients with the same genes mutated then we can
         develop therapies that will work for all of them.
-
+\end{itemize}
+\vspace{4 mm]}
 When we sequence tumour samples we tend to use samples that come from fully developed
 cancers that can carry hundreds to thousands of mutations in genes and many more outside
 of genes. The accumulation of these passenger mutations in cancer cells can happen
@@ -102,7 +104,7 @@ genes after the cell has become cancerous may still affect the growth rate, inva
 and even the response to chemotherapy but may not be present in all cells of a tumour.
 These genes may be drivers of chemo-resistance or metastasis and are equally good targets
 for therapies.
-
+\vspace{4 mm]}
 IntOGen-mutations is a platform that aims to identify driver mutations using two
 methodologies from cancer cohort mutation data: the first identifies mutations that
 are most likely to have a functional impact combined with identifying  genes that are
@@ -121,17 +123,17 @@ the identification of driver genes.
 IntOGen-mutations is a web platform that can allow users to run their analysis on the
 host’s servers or it can be downloaded and run without any limits on the number of
 analyses on a local server.
-
+\vspace{4 mm]}
 For the purposes of the course we will be using a local version of IntOGen so that we
 don’t encounter any issues sharing resources.
 \end{information}
 
 \begin{steps}
-To start IntOGen open a terminal and navigate to the somatic/intogen_mutations_analysis directory
+To start IntOGen open a terminal and navigate to the somatic/intogen_mutations_analysis directory.
 \begin{lstlisting}
 cd ~/somatic/intogen_mutations_analysis
 \end{lstlisting}
-
+\vspace{4 mm]}
 start IntOGen by typing
 \begin{lstlisting}
 ./run web
@@ -141,32 +143,32 @@ start IntOGen by typing
 \begin{information}
 A browser window should open up with the IntOGen home page displayed. 
 IntoGen requires you to log in to Mozilla persona.
-
+\vspace{4 mm]}
 On the top right hand side of the screen there will be a “Sign in“ button.
 \end{information}
 
 \begin{steps}
-Click the \texttt{Sign in} button
+Click the \texttt{Sign in} button.
 \end{steps}
 
 If you can access your email from the web you can create yourself an account. 
 You do need to verify your email address by logging in to your webmail.
-
-Alternatively, you can log in using these dummy account details
-	Email address:		amp.genomics@gmail.com
-	Password if required:   letmepass
+\vspace{4 mm]}
+Alternatively, you can log in using these dummy account details.
+\hspace{5mm} Email address:\hspace{10mm} amp.genomics@gmail.com.
+\hspace{5mm} Password if required:\hspace{5mm} letmepass.
 
 \begin{steps}
 Click on the \texttt{Analysis} button on the top tool bar. 
 Click on the \texttt{Analyse your data} button in the \texttt{Cohort analysis} panel.
-
+\vspace{4 mm]}
 A form will open up, click on the \texttt{Load} button and navigate to the
 TCGA_Melanoma_SMgene.maf file located in the directory path 
-\texttt{somatic/intogen/ TCGA_Melanoma_SMgene.maf}
-
-Make sure the Genome assembly is set to \texttt{hg19(GRCh37)}
-
-The click the \texttt{Start analysis} button
+\texttt{somatic/intogen/ TCGA_Melanoma_SMgene.maf}.
+\vspace{4 mm]}
+Ensure the Genome assembly is set to \texttt{hg19(GRCh37)}.
+\vspace{4 mm]}
+The click the \texttt{Start analysis} button.
 \end{steps}
 
 \begin{note}
@@ -178,29 +180,29 @@ to reduce processing time and only contains data for the top 680 mutated genes.
 The tool will take around 10 minutes to run and the progress will be indicated
 by the green bar. You may need to refresh the browser if it looks like there
 has been no progress for a while.
-
+\vspace{4 mm]}
 Once complete the output can be downloaded.
 \end{information}
 
 \begin{steps}
 Click on the download link to the left of the green bar or go through the
 results button at the top of the page.
-
+\vspace{4 mm]}
 Select to \texttt{save} the file which will end up in the download
-directory \texttt{~/Downloads}
-
-Click on the blue download arrow at the top right hand side of the browser window
-
-Click on the file called \texttt{TCGA_Melanoma_slimSMgene.zip}
-
-Highlight the file name in the pop-up window and click on Extract
-
+directory \texttt{~/Downloads}.
+\vspace{4 mm]}
+Click on the blue download arrow at the top right hand side of the browser window.
+\vspace{4 mm]}
+Click on the file called \texttt{TCGA_Melanoma_slimSMgene.zip}.
+\vspace{4 mm]}
+Highlight the file name in the pop-up window and click on \texttt{Extract}.
+\vspace{4 mm]}
 Select the \texttt{/trainee/somatic/intogen/} directory and click on the
-Extract button at the bottom of the window.
-
+\texttt{Extract} button at the bottom of the window.
+\vspace{4 mm]}
 Click to show files once extracted.
-
-Double click on the directory called \texttt{TCGA_Melanoma_slimSMgene}
+\vspace{4 mm]}
+Double click on the directory called \texttt{TCGA_Melanoma_slimSMgene}.
 \end{steps}
 
 %----------------------------------------------------------------------------------------
@@ -216,7 +218,7 @@ provides the same tabular information but in a flat file format.
 
 \begin{information}
 There are 7 files generated in a successful run of IntOGen:
-\begin{enumerate}
+\begin{itemize}
  \item genes.tsv - this is the main output summary table.
  \item variant_genes.tsv – describes the variants identified in the genes
  \item variant_samples.tsv – lists the variants together with the samples Ids
@@ -224,24 +226,24 @@ There are 7 files generated in a successful run of IntOGen:
  \item consequences.tsv – lists consequences of the variants in all known transcripts
  \item project.tsv – one line to summarise the input data
  \item fimpact.gitools.tdm – the output of the functional impact tool
-\end{enumerate}
+\end{itemize}
 \end{information}
 
 The scope of this practical will concentrate on identification of driver genes so we
 will look at the main output concerning genes. OncodriveFM does however also
 calculates a functional impact bias of high impact mutations in annotated Kegg
-pathways \url {http://www.genome.jp/kegg/pathway.html} as shown in the
-pathways.tsv file but will not be used in this course.
+pathways \url{http://www.genome.jp/kegg/pathway.html} as shown in the
+\texttt{pathways.tsv} file but will not be used in this course.
 
 \beign{steps}
-Open up the \texttt{genes.tsv} in the spreadsheet software by double clicking on the file
+Open up the \texttt{genes.tsv} in the spreadsheet software by double clicking on the file.
 \end{steps}
 
 \begin{information}
 This file contains the overall summary results for the IntOGen pipeline presented by
 gene and reports Q values (i.e. multiple testing corrected P values) for the mutation
 frequency and cluster modules.
-
+\vspace{4 mm]}
 Significantly mutated genes from the cohort data are identified using the OncodriveFM
 module of IntOGen. This tool detects genes that have accumulated mutations with a
 high functional impact. It uses annotations from the Ensembl variant effect predictor
@@ -270,26 +272,26 @@ Now look at their sample frequency (column 9 SAMPLE_FREQ) values these are
 the number of samples that contain at least one mutation in the gene.
 \end{steps}
 
-\begin{question}
-a)Which gene has mutations in the most samples?
-
-b)Which gene had the lowest FM Q value?
-
-c)Why don’t the genes with the lowest Q values also have the highest sample frequency
+\begin{questions}
+\begin{itemize}
+\item a)Which gene has mutations in the most samples?
+\item b)Which gene had the lowest FM Q value?
+\item c)Why don’t the genes with the lowest Q values also have the highest sample frequency
 value?
-\end{question}
+\end{itemize}
+\end{questions}
 
 \begin{answer}
-a)TTN has the highest number of samples with mutations. There are 265 out of 327
+\begin{itemize}
+\item a)TTN has the highest number of samples with mutations. There are 265 out of 327
 samples with mutations in TTN.
-
-b)TP53 or PTEN
-
-c)The P value calculation takes into account the length of the coding sequence
+\item b)TP53 or PTEN
+\itemc)The P value calculation takes into account the length of the coding sequence
 of the gene, the mutation rate of the nucleotides contained within it and the functional
 consequences of those changes. Therefore a small gene with a small number of deleterious
 mutations may have a lower P value and also Q value than a large gene with a high
 mutation frequency.
+\end{itemize}
 \end{answer}
 
 \begin{information}
@@ -306,9 +308,9 @@ that there are 158 samples with mutations between the amino acid positions 594-6
 BRAF; 84 samples with mutations at amino acid position 61 of NRAS; and 15 sample with
 mutations at amino acid position 132 of IDH1.
 
-\begin{question} 
+\begin{questions} 
 Why are the oncogenes more likely to have clustered mutations and the tumour suppressor genes less likely?
-\end{question}
+\end{questions}
 
 \begin{answer}
 Gain of function mutations are required to activate oncogenes and so only key residues in the protein
@@ -341,9 +343,9 @@ This data comes from a diverse population that typically don’t have cancer but f
 with heart, lung and blood disorders.
 \end{information}
 
-\begin{question}
+\begin{questions}
 Can we draw any conclusions from the high number of ESP mutations and dbSNP references for TTN?
-\end{question}
+\end{questions}
 
 \begin{answer}
 Functional studies would be the only way to prove conclusively if TTN mutations were cancer driver mutations.
@@ -351,14 +353,16 @@ The high number of samples in the ESP cohort that have mutations in common with 
 could indicate that TTN mutation may not be unique to the cancer setting. This conclusion seems to be
 backed up by the high number of mutations also with dbSNP ids that indicates the potential for some of
 these mutations to be present in the general population.
+\vspace{4 mm]}
 Amongst this high number of mutations there may be groups of patients where the mutations are purely
 passenger and other groups where the mutations could contribute to the tumour.
+\vspace{4 mm]}
 From this data there is no way to tell.
 \end{answer}
 
 \begin{information}
 The other files in the output support the information in this sheet.
-
+\vspace{4 mm]}
 The \texttt{variant_genes.tsv} file includes a summary of all mutation found in each of the genes with a count
 of the number of samples identified to have that mutation. It also reports the variant impact score
 and category of which there are four; high, medium, low and none.
@@ -368,11 +372,11 @@ and category of which there are four; high, medium, low and none.
 Open up the \texttt{variant_genes.tsv} file and explore the data. 
 \end{steps}
 
-\begin{question} 
+\begin{questions} 
 Can you find out what the nucleotide change details for the most common BRAF mutation that results
 in V600E amino acid change in the cohort?
 Sort the data on the gene symbol column to make this easier.
-\end{question}
+\end{questions}
 
 \begin{answer}
 It is an A>T at position chr7:140453136 identified in 127 samples.
@@ -387,10 +391,10 @@ for the samples with the mutation that you are interested in.
 Open up the \texttt{variant_samples.tsv} file and explore the data. 
 \end{steps}
 
-\begin{question}
+\begin{questions}
 Can you use the position that you found in the question above to locate the sample IDs for the 3
 cases with a V600R BRAF mutation that is caused by a nucleotide change of AC/CT starting at chr7:140453136?
-\end{question}
+\end{questions}
 
 \begin{answer}
 TCGA-D3-A1QA-06A-11D-A196-08, TCGA-EB-A3XC-01A-11D-A23B-08, TCGA-ER-A193-06A-12D-A197-08
