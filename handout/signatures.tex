@@ -59,7 +59,7 @@ After completing this practical the trainee should be able to:
   \item[Cairo] \hfill\\
     \url{https://cran.rstudio.com/web/packages/Cairo/index.html}
 \end{description}
-
+ 
 %------------------------------------------------
 
 \subsection{Sources of Data}
@@ -108,7 +108,7 @@ Common mutational processes that are regularly identified in cancer sequencing a
 In cohort cancer analysis it is common to try to generate subtypes to group your data based on a particular molecular phenotype.
 A reason for doing may include finding sets of patients that have a similar form of the disease and therefore all might benefit from a particular treatment.
 We can use the somatic mutational signatures analysis to group the data from a cohort of patients to inform which genomes are most similar based on the pattern of exposures or processes that have contributed to their genome changes.
-The patients don’t have to have the same type of cancer so pan-cancer studies are using this analysis to find similarities across cancer types.
+The patients don't have to have the same type of cancer so pan-cancer studies are using this analysis to find similarities across cancer types.
 
 
 %----------------------------------------------------------------------------------------
@@ -120,7 +120,7 @@ The patients don’t have to have the same type of cancer so pan-cancer studies ar
 \begin{information}
 The mathematical framework developed by Alexandrov et al was implemented in MATLAB.
 We are going to use a version implemented in R by Gehring et al, called \texttt{SomaticSignatures package}, that is very quick and flexible but currently only accepts point mutations not insertions or deletions (indels).
-In tests on our data we have found that the Somatic Signatures package in R returns very similar results to the full implementation of Alexandrov’s framework.
+In tests on our data we have found that the Somatic Signatures package in R returns very similar results to the full implementation of Alexandrov's framework.
 \end{information}
 \vspace{4 mm}
 
@@ -249,7 +249,7 @@ mc <- mutationContext(vranges.cat, BSgenome.Hsapiens.UCSC.hg19)
 \end{lstlisting}
 
 We can inspect what information we had added to the vranges.cat
-object by typing ‘mc’ on the command line. Notice that the mutation
+object by typing ‘mc' on the command line. Notice that the mutation
 and its context have been added to the last two columns.
 \begin{lstlisting}
 mc
@@ -515,7 +515,7 @@ How can this analysis be useful for cancer genomics studies?
 Now rerun the process this time using 4 signatures as the solution.
 \vspace{4 mm}
 \begin{information}
-Hint: you don’t have to start back at the beginning but you can jump
+Hint: you don't have to start back at the beginning but you can jump
 to the step where you run the NMF but this time for 4 instead of 3
 signatures. Then continue through making the plots.
 \vspace{4 mm}
