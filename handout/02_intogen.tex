@@ -129,7 +129,7 @@ don't encounter any issues sharing resources.
 \end{information}
 
 \begin{steps}
-To start IntOGen open a terminal and navigate to the somatic/intogen_mutations_analysis directory.
+To start IntOGen open a terminal and navigate to the somatic/intogen\_mutations\_analysis directory.
 \begin{lstlisting}
 cd ~/somatic/intogen_mutations_analysis
 \end{lstlisting}
@@ -163,8 +163,8 @@ Click on the \texttt{Analysis} button on the top tool bar.
 Click on the \texttt{Analyse your data} button in the \texttt{Cohort analysis} panel.
 \vspace{4 mm]}
 A form will open up, click on the \texttt{Load} button and navigate to the
-TCGA_Melanoma_SMgene.maf file located in the directory path 
-\texttt{somatic/intogen/ TCGA_Melanoma_SMgene.maf}.
+TCGA\_Melanoma\_SMgene.maf file located in the directory path 
+\texttt{somatic/intogen/ TCGA\_Melanoma\_SMgene.maf}.
 \vspace{4 mm]}
 Ensure the Genome assembly is set to \texttt{hg19(GRCh37)}.
 \vspace{4 mm]}
@@ -193,7 +193,7 @@ directory \texttt{~/Downloads}.
 \vspace{4 mm]}
 Click on the blue download arrow at the top right hand side of the browser window.
 \vspace{4 mm]}
-Click on the file called \texttt{TCGA_Melanoma_slimSMgene.zip}.
+Click on the file called \texttt{TCGA\_Melanoma\_slimSMgene.zip}.
 \vspace{4 mm]}
 Highlight the file name in the pop-up window and click on \texttt{Extract}.
 \vspace{4 mm]}
@@ -202,7 +202,7 @@ Select the \texttt{/trainee/somatic/intogen/} directory and click on the
 \vspace{4 mm]}
 Click to show files once extracted.
 \vspace{4 mm]}
-Double click on the directory called \texttt{TCGA_Melanoma_slimSMgene}.
+Double click on the directory called \texttt{TCGA\_Melanoma\_slimSMgene}.
 \end{steps}
 
 %----------------------------------------------------------------------------------------
@@ -210,7 +210,7 @@ Double click on the directory called \texttt{TCGA_Melanoma_slimSMgene}.
 %----------------------------------------------------------------------------------------
 \section{Exploring the output of IntOGen}
 
-\start{information}
+\begin{information}
 When you run your data over the web on the remote site there is a browse facility that
 allows you to explore your data using the web version of the database. Running IntOGen locally
 provides the same tabular information but in a flat file format.
@@ -219,13 +219,13 @@ provides the same tabular information but in a flat file format.
 \begin{information}
 There are 7 files generated in a successful run of IntOGen:
 \begin{itemize}
- \item genes.tsv \- this is the main output summary table.
- \item variant_genes.tsv \– describes the variants identified in the genes
- \item variant_samples.tsv \– lists the variants together with the samples Ids
- \item pathways.tsv \– lists the Kegg pathway ID for perturbed pathways
- \item consequences.tsv \– lists consequences of the variants in all known transcripts
- \item project.tsv \– one line to summarise the input data
- \item fimpact.gitools.tdm \– the output of the functional impact tool
+ \item genes.tsv - this is the main output summary table.
+ \item variant\_genes.tsv - describes the variants identified in the genes
+ \item variant\_samples.tsv - lists the variants together with the samples Ids
+ \item pathways.tsv - lists the Kegg pathway ID for perturbed pathways
+ \item consequences.tsv \- lists consequences of the variants in all known transcripts
+ \item project.tsv - one line to summarise the input data
+ \item fimpact.gitools.tdm - the output of the functional impact tool
 \end{itemize}
 \end{information}
 
@@ -235,7 +235,7 @@ calculates a functional impact bias of high impact mutations in annotated Kegg
 pathways \url{http://www.genome.jp/kegg/pathway.html} as shown in the
 \texttt{pathways.tsv} file but will not be used in this course.
 
-\beign{steps}
+\begin{steps}
 Open up the \texttt{genes.tsv} in the spreadsheet software by double clicking on the file.
 \end{steps}
 
@@ -255,20 +255,20 @@ functional impact.
 
 \begin{steps}
 Sort the data in this file by two levels starting with the 5th column,
-the FM_QVALUE from smallest-to-biggest and then by the 12th column the
-CLUST_QVALUE also from smallest-to-biggest.
+the FM\_QVALUE from smallest-to-biggest and then by the 12th column the
+CLUST\_QVALUE also from smallest-to-biggest.
 \end{steps}
 
 The top nine genes with the smallest Q values should be
 TP53, PTEN, PPP6C, CDKN2A, BRAF, NRAS, ARID2, TTN, IDH1.
 
 \begin{information}
-All of these have very small FM_Qvalues which means they are all significantly
+All of these have very small FM\_Qvalues which means they are all significantly
 mutated genes in this TCGA Melanoma cohort of 338 patients.
 \end{information}
 
 \begin{steps}
-Now look at their sample frequency (column 9 SAMPLE_FREQ) values these are
+Now look at their sample frequency (column 9 SAMPLE\_FREQ) values these are
 the number of samples that contain at least one mutation in the gene.
 \end{steps}
 
@@ -286,7 +286,7 @@ value?
 \item a)TTN has the highest number of samples with mutations. There are 265 out of 327
 samples with mutations in TTN.
 \item b)TP53 or PTEN
-\itemc)The P value calculation takes into account the length of the coding sequence
+\item c)The P value calculation takes into account the length of the coding sequence
 of the gene, the mutation rate of the nucleotides contained within it and the functional
 consequences of those changes. Therefore a small gene with a small number of deleterious
 mutations may have a lower P value and also Q value than a large gene with a high
@@ -297,13 +297,13 @@ mutation frequency.
 \begin{information}
 The results for the assessment of clustered mutations in genes carried out by the
 OncodriveCLUST module of IntOGen are shown in the 10-14th columns. The Q value is in
-column 12, CLUST_QVALUE which indicates if there is a significant grouping of mutations
+column 12, CLUST\_QVALUE which indicates if there is a significant grouping of mutations
 identified. The positions of the mutations are now described in terms of the amino acid
 residue in the encoded protein.
 \end{information}
 
-The three oncogenes BRAF, NRAS and IDH1 have very low CLUST_QVALUEs <0.01 indicating
-that the mutations in these genes are highly clustered. The CLUST_COORDS column reports
+The three oncogenes BRAF, NRAS and IDH1 have very low CLUST\_QVALUEs <0.01 indicating
+that the mutations in these genes are highly clustered. The CLUST\_COORDS column reports
 that there are 158 samples with mutations between the amino acid positions 594-601 of
 BRAF; 84 samples with mutations at amino acid position 61 of NRAS; and 15 sample with
 mutations at amino acid position 132 of IDH1.
@@ -320,7 +320,7 @@ and have the same deleterious functional result.
 \end{answer}
 
 \begin{information}
-The INTOGEN_DRIVER column indicates if this gene is a known cancer driver gene with 1 for yes and
+The INTOGEN\_DRIVER column indicates if this gene is a known cancer driver gene with 1 for yes and
 0 for no so it is promising to see the majority of our top hit genes are known drivers.
 
 The XREFS column indicates a mutation match in external databases. This means the position and
@@ -363,13 +363,13 @@ From this data there is no way to tell.
 \begin{information}
 The other files in the output support the information in this sheet.
 \vspace{4 mm]}
-The \texttt{variant_genes.tsv} file includes a summary of all mutation found in each of the genes with a count
+The \texttt{variant\_genes.tsv} file includes a summary of all mutation found in each of the genes with a count
 of the number of samples identified to have that mutation. It also reports the variant impact score
 and category of which there are four; high, medium, low and none.
 \end{information}
 
 \begin{steps}
-Open up the \texttt{variant_genes.tsv} file and explore the data. 
+Open up the \texttt{variant\_genes.tsv} file and explore the data. 
 \end{steps}
 
 \begin{questions} 
@@ -383,12 +383,12 @@ It is an A>T at position chr7:140453136 identified in 127 samples.
 \end{answer}
 
 \begin{information}
-The \texttt{variant_samples.tsv} worksheet allows you to find out the sample identification numbers
+The \texttt{variant\_samples.tsv} worksheet allows you to find out the sample identification numbers
 for the samples with the mutation that you are interested in.
 \end{information}
 
 \begin{steps}
-Open up the \texttt{variant_samples.tsv} file and explore the data. 
+Open up the \texttt{variant\_samples.tsv} file and explore the data. 
 \end{steps}
 
 \begin{questions}
