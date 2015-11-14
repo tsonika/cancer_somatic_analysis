@@ -86,15 +86,15 @@ metastases, resistance and survival. Driver gene mutations are often described a
 events because they were key in turning a normally functioning and regulated cell into a
 dysregulated one. The logical assumption is that these key mutations will be present in
 all tumour cells in a patient's sample; although sometime this is not true.
-\vspace{4 mm]}
+\vspace{4 mm}
 There are two major research goals that underline the need to identify driver genes:
 \begin{itemize}
- \item By identifying the early changes that take place researchers might be able
-        to find a treatment to stop the root cause of why cells become malignant. 
+\item By identifying the early changes that take place researchers might be able
+to find a treatment to stop the root cause of why cells become malignant. 
 \item By identifying groups of patients with the same genes mutated then we can
-        develop therapies that will work for all of them.
+develop therapies that will work for all of them.
 \end{itemize}
-\vspace{4 mm]}
+\vspace{4 mm}
 When we sequence tumour samples we tend to use samples that come from fully developed
 cancers that can carry hundreds to thousands of mutations in genes and many more outside
 of genes. The accumulation of these passenger mutations in cancer cells can happen
@@ -104,14 +104,13 @@ genes after the cell has become cancerous may still affect the growth rate, inva
 and even the response to chemotherapy but may not be present in all cells of a tumour.
 These genes may be drivers of chemo-resistance or metastasis and are equally good targets
 for therapies.
-\vspace{4 mm]}
+\vspace{4 mm}
 IntOGen-mutations is a platform that aims to identify driver mutations using two
 methodologies from cancer cohort mutation data: the first identifies mutations that
 are most likely to have a functional impact combined with identifying  genes that are
 frequently mutated; and the second, genes that harbour clustered mutations. These measures
 are all indicators of positive selection that occurs in cancer evolution and may help
 the identification of driver genes.
-
 
 %----------------------------------------------------------------------------------------
 %	analysing cohort data with IntOGen
@@ -123,7 +122,7 @@ the identification of driver genes.
 IntOGen-mutations is a web platform that can allow users to run their analysis on the
 host's servers or it can be downloaded and run without any limits on the number of
 analyses on a local server.
-\vspace{4 mm]}
+\vspace{4 mm}
 For the purposes of the course we will be using a local version of IntOGen so that we
 don't encounter any issues sharing resources.
 \end{information}
@@ -133,7 +132,7 @@ To start IntOGen open a terminal and navigate to the somatic/intogen\_mutations\
 \begin{lstlisting}
 cd ~/somatic/intogen_mutations_analysis
 \end{lstlisting}
-\vspace{4 mm]}
+\vspace{4 mm}
 start IntOGen by typing
 \begin{lstlisting}
 ./run web
@@ -143,7 +142,7 @@ start IntOGen by typing
 \begin{information}
 A browser window should open up with the IntOGen home page displayed. 
 IntoGen requires you to log in to Mozilla persona.
-\vspace{4 mm]}
+\vspace{4 mm}
 On the top right hand side of the screen there will be a "Sign in" button.
 \end{information}
 
@@ -153,7 +152,7 @@ Click the \texttt{Sign in} button.
 
 If you can access your email from the web you can create yourself an account. 
 You do need to verify your email address by logging in to your webmail.
-\vspace{4 mm]}
+\vspace{4 mm}
 Alternatively, you can log in using these dummy account details.
 \hspace{5mm} Email address:\hspace{10mm} amp.genomics@gmail.com.
 \hspace{5mm} Password if required:\hspace{5mm} letmepass.
@@ -161,13 +160,13 @@ Alternatively, you can log in using these dummy account details.
 \begin{steps}
 Click on the \texttt{Analysis} button on the top tool bar. 
 Click on the \texttt{Analyse your data} button in the \texttt{Cohort analysis} panel.
-\vspace{4 mm]}
+\vspace{4 mm}
 A form will open up, click on the \texttt{Load} button and navigate to the
 TCGA\_Melanoma\_SMgene.maf file located in the directory path 
 \texttt{somatic/intogen/ TCGA\_Melanoma\_SMgene.maf}.
-\vspace{4 mm]}
+\vspace{4 mm}
 Ensure the Genome assembly is set to \texttt{hg19(GRCh37)}.
-\vspace{4 mm]}
+\vspace{4 mm}
 The click the \texttt{Start analysis} button.
 \end{steps}
 
@@ -180,28 +179,28 @@ to reduce processing time and only contains data for the top 680 mutated genes.
 The tool will take around 10 minutes to run and the progress will be indicated
 by the green bar. You may need to refresh the browser if it looks like there
 has been no progress for a while.
-\vspace{4 mm]}
+\vspace{4 mm}
 Once complete the output can be downloaded.
 \end{information}
 
 \begin{steps}
 Click on the download link to the left of the green bar or go through the
 results button at the top of the page.
-\vspace{4 mm]}
+\vspace{4 mm}
 Select to \texttt{save} the file which will end up in the download
 directory \texttt{~/Downloads}.
-\vspace{4 mm]}
+\vspace{4 mm}
 Click on the blue download arrow at the top right hand side of the browser window.
-\vspace{4 mm]}
+\vspace{4 mm}
 Click on the file called \texttt{TCGA\_Melanoma\_slimSMgene.zip}.
-\vspace{4 mm]}
+\vspace{4 mm}
 Highlight the file name in the pop-up window and click on \texttt{Extract}.
-\vspace{4 mm]}
+\vspace{4 mm}
 Select the \texttt{/trainee/somatic/intogen/} directory and click on the
 \texttt{Extract} button at the bottom of the window.
-\vspace{4 mm]}
+\vspace{4 mm}
 Click to show files once extracted.
-\vspace{4 mm]}
+\vspace{4 mm}
 Double click on the directory called \texttt{TCGA\_Melanoma\_slimSMgene}.
 \end{steps}
 
@@ -223,7 +222,7 @@ There are 7 files generated in a successful run of IntOGen:
  \item variant\_genes.tsv - describes the variants identified in the genes
  \item variant\_samples.tsv - lists the variants together with the samples Ids
  \item pathways.tsv - lists the Kegg pathway ID for perturbed pathways
- \item consequences.tsv \- lists consequences of the variants in all known transcripts
+ \item consequences.tsv - lists consequences of the variants in all known transcripts
  \item project.tsv - one line to summarise the input data
  \item fimpact.gitools.tdm - the output of the functional impact tool
 \end{itemize}
@@ -243,7 +242,7 @@ Open up the \texttt{genes.tsv} in the spreadsheet software by double clicking on
 This file contains the overall summary results for the IntOGen pipeline presented by
 gene and reports Q values (i.e. multiple testing corrected P values) for the mutation
 frequency and cluster modules.
-\vspace{4 mm]}
+\vspace{4 mm}
 Significantly mutated genes from the cohort data are identified using the OncodriveFM
 module of IntOGen. This tool detects genes that have accumulated mutations with a
 high functional impact. It uses annotations from the Ensembl variant effect predictor
@@ -274,19 +273,19 @@ the number of samples that contain at least one mutation in the gene.
 
 \begin{questions}
 \begin{itemize}
-\item a)Which gene has mutations in the most samples?
-\item b)Which gene had the lowest FM Q value?
-\item c)Why don't the genes with the lowest Q values also have the highest sample frequency
+\item a) Which gene has mutations in the most samples?
+\item b) Which gene had the lowest FM Q value?
+\item c) Why don't the genes with the lowest Q values also have the highest sample frequency
 value?
 \end{itemize}
 \end{questions}
 
 \begin{answer}
 \begin{itemize}
-\item a)TTN has the highest number of samples with mutations. There are 265 out of 327
+\item a) TTN has the highest number of samples with mutations. There are 265 out of 327
 samples with mutations in TTN.
-\item b)TP53 or PTEN
-\item c)The P value calculation takes into account the length of the coding sequence
+\item b) TP53 or PTEN
+\item c) The P value calculation takes into account the length of the coding sequence
 of the gene, the mutation rate of the nucleotides contained within it and the functional
 consequences of those changes. Therefore a small gene with a small number of deleterious
 mutations may have a lower P value and also Q value than a large gene with a high
@@ -353,16 +352,16 @@ The high number of samples in the ESP cohort that have mutations in common with 
 could indicate that TTN mutation may not be unique to the cancer setting. This conclusion seems to be
 backed up by the high number of mutations also with dbSNP ids that indicates the potential for some of
 these mutations to be present in the general population.
-\vspace{4 mm]}
+\vspace{4 mm}
 Amongst this high number of mutations there may be groups of patients where the mutations are purely
 passenger and other groups where the mutations could contribute to the tumour.
-\vspace{4 mm]}
+\vspace{4 mm}
 From this data there is no way to tell.
 \end{answer}
 
 \begin{information}
 The other files in the output support the information in this sheet.
-\vspace{4 mm]}
+\vspace{4 mm}
 The \texttt{variant\_genes.tsv} file includes a summary of all mutation found in each of the genes with a count
 of the number of samples identified to have that mutation. It also reports the variant impact score
 and category of which there are four; high, medium, low and none.
