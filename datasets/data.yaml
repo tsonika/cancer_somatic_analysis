@@ -66,3 +66,6 @@ btp::modules:
       Sample12.vcf: 
         source: 'https://s3-ap-southeast-2.amazonaws.com/cancer-data-somatic/somatic_signatures'
         targets: 'somatic/somatic_signatures/Sample12.vcf'
+      intogen_mutations_analysis.tar.gz: 
+        source: 'https://s3-ap-southeast-2.amazonaws.com/cancer-data-somatic/intogen_mutations_analysis.tar.gz'
+        targets: 'somatic/intogen_mutations_analysis.tar.gz'
