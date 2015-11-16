@@ -6,10 +6,10 @@ btp::modules:
       - 'somatic/intogen/precomputed_results'
       - 'somatic/somatic_signatures'
     data:
-      TCGA_Melanoma_SMgene.maf: 
+      TCGA_Melanoma_slimSMgene.maf: 
         source: 'https://s3-ap-southeast-2.amazonaws.com/cancer-data-somatic/intogen'
         targets: 
-          - 'somatic/intogen/TCGA_Melanoma_SMgene.maf'
+          - 'somatic/intogen/TCGA_Melanoma_slimSMgene.maf'
       consequences.tsv: 
         source: 'https://s3-ap-southeast-2.amazonaws.com/cancer-data-somatic/intogen/precomputed_results'
         targets: 
