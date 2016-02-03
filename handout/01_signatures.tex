@@ -267,12 +267,12 @@ We can calculate this by listing out the six possible types of single
 nucleotide mutations:
 \vspace{4 mm}
 \begin{itemize}
-\item A/C \hspace{5 mm} the reverse compliment (T/G) is also in this group
-\item A/G \hspace{5 mm} includes (T/C)
-\item A/T \hspace{5 mm} includes (T/A)
-\item C/A \hspace{5 mm} includes (G/T)
+\item C/A \hspace{5 mm} the reverse compliment (G/T) is also in this group 
 \item C/G \hspace{5 mm} includes (G/C)
 \item C/T \hspace{5 mm} includes (G/C)
+\item T/A \hspace{5 mm} includes (A/T)
+\item T/C \hspace{5 mm} includes (A/G)
+\item T/G \hspace{5 mm} includes (A/C)
 \end{itemize}
 \vspace{4 mm}
 The neighbouring bases, on either side of a mutation, are referred to as the mutation context. 
@@ -290,13 +290,13 @@ Now if we substitute the [.]'s with each of the 6 different mutations you will f
 \vspace{4 mm}
 Start by substituting [.] for the A/C mutation type
 \begin{itemize}
-\item A[A/C]A
-\item A[A/C]C	    
-\item A[A/C]G	    
-\item A[A/C]T
-\item C[A/C]A
-\item C[A/C]C
-\item C[A/C]G
+\item A[C/A]A
+\item A[C/A]C	    
+\item A[C/A]G	    
+\item A[C/A]T
+\item C[C/A]A
+\item C[C/A]C
+\item C[C/A]G
 \end{itemize}
 and so on...
 \vspace{4 mm}
@@ -304,12 +304,12 @@ We assign all the somatic mutations identified in a single tumour to one of thes
 \end{information}
 
 \begin{questions}
-What about a mutation that looks like G[T/G]A, where should this go?
+What about a mutation that looks like G[A/C]A, where should this go?
 Hint remember to reverse compliment all the nucleotides.
 \end{questions}
 
 \begin{answer}
-    In the T[A/C]C context count.
+    In the T[T/G]C context count.
 \end{answer}
 
 \begin{steps}
