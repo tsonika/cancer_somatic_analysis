@@ -77,6 +77,8 @@ After completing this practical the trainee should be able to:
 \subsection{Useful Links}
 
 \begin{description}[style=multiline,labelindent=0cm,align=left,leftmargin=1cm]
+ \item[Somatic Signatures web page] \hfill\\
+  \url{http://cancer.sanger.ac.uk/cosmic/signatures}
  \item[Variant Call Format (VCF) specification] \hfill\\
   \url{http://samtools.github.io/hts-specs/VCFv4.2.pdf}
 \end{description}
@@ -91,10 +93,8 @@ After completing this practical the trainee should be able to:
 \section{Introduction}
 
 The most common genetic model for cancer development is the accumulation of DNA mutations over time, eventually leading to the disruption or dysregulation of enough key genes that lead cells to uncontrolled growth.
-Cells in our bodies accumulate DNA mutations over time due to normal aging processes and through exposure to carcinogens.
-\vspace{4 mm}
-Recently researchers found a method to take all the single nucleotide mutations identified in tumour cells (somatic SNVs) and group them together by the type of the mutation and also what the neighbouring bases are. This is commonly referred to as somatic mutational signatures.
-\vspace{4 mm}
+Cells in our bodies accumulate DNA mutations over time due to normal aging processes, through exposure to carcinogens or through defects in the cell's ability to repair mistakes.
+Recently researchers found a method to take all the single nucleotide mutations identified in tumour cells (somatic SNVs) and cluster them together by the type of the mutation and also what the neighbouring bases are. This is commonly referred to as somatic mutational signatures.
 Common mutational processes that are regularly identified in cancer sequencing are:
 \begin{itemize}
 \item Age: the aging process. These are high in C/T transitions due to deamination of methyl-cytidine.
@@ -118,7 +118,7 @@ The patients don't have to have the same type of cancer so pan-cancer studies ar
 \section{Preparing the R environment}
 
 \begin{information}
-The mathematical framework developed by Alexandrov et al was implemented in MATLAB.
+The mathematical framework developed by Alexandrov et al to cluster the somoatic mutations was implemented in MATLAB.
 We are going to use a version implemented in R by Gehring et al, called \texttt{SomaticSignatures package}, that is very quick and flexible but currently only accepts point mutations not insertions or deletions (indels).
 In tests on our data we have found that the Somatic Signatures package in R returns very similar results to the full implementation of Alexandrov's framework.
 \end{information}
@@ -288,7 +288,7 @@ There are 16 possible combinations of mutation contexts. Here [.] stands for one
 Now if we substitute the [.]'s with each of the 6 different mutations you will find there are 96 possible types of combined mutations and contexts (6 x 16). 
 
 \vspace{4 mm}
-Start by substituting [.] for the A/C mutation type
+Start by substituting [.] for the C/A mutation type
 \begin{itemize}
 \item A[C/A]A
 \item A[C/A]C	    
@@ -418,7 +418,7 @@ mutations are still in the same order across the plot.
 In their paper Alexandrov et al used this analysis to generate profiles from the data for
 more than 7000 tumour samples sequenced through both exome and whole genome approaches.
 They were able to group the data to reveal which genomes have been exposed to similar
-mutational processes contributing to the genome mutations.
+mutational processes contributing to the genome mutations. More information can be found on the signatures page of the COSMIC website.
 
 \begin{figure}[H]
 \centering
@@ -521,7 +521,7 @@ to the step where you run the NMF but this time for 4 instead of 3
 signatures. Then continue through making the plots.
 \vspace{4 mm}
 You will need to change the name of each plot you remake with 4
-signatures because Cairo won't let you overwrite and existing file.
+signatures because Cairo won't let you overwrite an existing file.
 \end{information}
 \begin{questions}
 Can you find a good match in the set of known signatures for all 4 patterns? 
